@@ -1,0 +1,35 @@
+#header {
+
+  .site-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #3399bb;
+  }
+
+  .site-description {
+    font-style: italic;
+
+    @media (min-width: @grid-float-breakpoint) {
+      text-align: right;
+    }
+  }
+
+  nav {
+    margin: 15px -15px;
+    .border-radius(0);
+
+    li {
+      padding: 0 15px;
+
+      &:hover a {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+
+      @media (min-width: @grid-float-breakpoint) {
+        padding: 0;
+      }
+    }
+  }
+
+}

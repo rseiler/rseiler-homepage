@@ -1,0 +1,11 @@
+<!-- inject:css -->
+<!-- endinject -->
+#if($minifiedJavaScript)
+<!-- inject:min:js -->
+<!-- endinject:min -->
+#else
+<!-- inject:jsvendor -->
+<!-- endinject -->
+<!-- inject:js -->
+<!-- endinject -->
+#end

@@ -1,0 +1,2 @@
+build.time=${build.time}
+build.version=${project.version}

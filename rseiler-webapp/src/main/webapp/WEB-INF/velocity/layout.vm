@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reinhard Seiler</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="shortcut icon" type='image/x-icon' href="/resources/favicon.ico"/>
+
+    #parse('include/css-js-rseiler-includes.vm')
+    <!-- build.time:${buildTime} -->
+    <!-- build.version:${buildVersion} -->
+</head>
+<body id="page-${pageName}">
+
+<div id="wrapper">
+    <div id="header" class="clearfix">
+        <div class="row">
+            <div class="site-title col-sm-7">
+                Reinhard Seiler
+            </div>
+
+            <div class="site-description col-sm-5">
+                Software Developer: Java, Web and IT
+            </div>
+        </div>
+
+        <nav role="navigation" class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="http://reinhard-seiler.blogspot.co.at">Blog <img src="/resources/external-link.png"/></a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/cv">Curriculum Vitae</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/imprint">Imprint</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content">
+
+        $screen_content
+
+    </div>
+</div>
+
+</body>
+</html>

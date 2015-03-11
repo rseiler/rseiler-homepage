@@ -1,0 +1,47 @@
+{
+  "author": "Reinhard Seiler",
+  "name": "rseiler",
+  "description": "Reinhard Seiler's homepage!",
+  "version": "1.0.0",
+  "homepage": "http://rseiler.at/",
+  "licenses": {
+    "type": "Proprietary",
+    "url": "http://rseiler.at/"
+  },
+  "repository": {
+    "type": "svn",
+    "url": ""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "3.8.10",
+    "gulp-angular-templatecache": "1.5.0",
+    "gulp-bower-files": "0.2.6",
+    "gulp-clean": "0.3.1",
+    "gulp-concat": "2.4.2",
+    "gulp-foreach": "0.1.0",
+    "gulp-inject": "1.0.2",
+    "gulp-karma": "0.0.4",
+    "gulp-less": "2.0.1",
+    "gulp-print": "1.1.0",
+    "gulp-rename": "1.2.0",
+    "gulp-size": "1.1.0",
+    "gulp-strip-debug": "1.0.2",
+    "gulp-tslint": "1.4.1",
+    "gulp-typescript": "2.3.0",
+    "gulp-uglify": "1.0.2",
+    "gulp-util": "3.0.1",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.28",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.3.3",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-typescript-preprocessor": "0.0.14",
+    "merge-stream": "0.1.6",
+    "path": "0.4.9",
+    "run-sequence": "1.0.2",
+    "streamqueue": "0.1.1",
+    "yargs": "1.3.3"
+  }
+}
