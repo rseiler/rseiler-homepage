@@ -37,9 +37,9 @@ public class StaticViewController {
      * @param page    the name of the static page
      * @return the view name
      */
-    @RequestMapping("/{page:\\w+}")
+    @RequestMapping("/{page:[\\w-]+}")
     public String generic(HttpServletRequest request, @PathVariable("page") String page) {
-        return getViewName(request, page);
+        return getViewName(request, page.toLowerCase());
     }
 
     /**

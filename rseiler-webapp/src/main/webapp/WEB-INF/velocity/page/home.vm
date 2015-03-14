@@ -6,29 +6,23 @@
     since 2005. Since 2012 I am working as a full time software developer.
 </p>
 
-<h2>Consultant / Project Work</h2>
-<p>
-    Do you need help with a project?<br/>
-    Then <a href="/contact">contact me</a> and I will assist you with your project.<br/>
-    In addition to my daily work I'm always looking for new challenges and exciting projects.
-</p>
-
-<h2>GitHub (Open Source) Highlights</h2>
-<p>
-    More information to the projects are available in the <a href="/projects">Projects</a> section or at the project pages.
-</p>
+<h2>Projects on the Maven Central Repository</h2>
 <ul>
+    <li>
+        <a href="https://github.com/rseiler/pom-project">Maven POM-Project</a><br/>
+        The POM is indented to be used as a parent POM, to speed up the setup/configuration of a new project.
+    </li>
     <li>
         <a href="https://github.com/rseiler/spBee">spBee - Stored Procedure Bee</a><br/>
         This framework allows to declare the stored procedures calls declarative instead of programmatically.
     </li>
+</ul>
+
+<h2>GitHub (Open Source) Highlights</h2>
+<ul>
     <li>
         <a href="https://github.com/rseiler/lcmip">LCMiP - Log Called Methods in Production</a><br/>
         A tool box to log all called methods and to create a report of all unused classes and unused methods.
-    </li>
-    <li>
-        <a href="https://github.com/rseiler/pom-project">Maven POM</a><br/>
-        The POM is indented to be used as a parent POM, to speed up the setup/configuration of a new project.
     </li>
 </ul>
 
@@ -55,6 +49,13 @@
         </a>
     </li>
 </ul>
+
+<h2>Consultant / Project Work</h2>
+<p>
+    Do you need help with a project?<br/>
+    Then <a href="/contact">contact me</a> and I will assist you with your project.<br/>
+    In addition to my daily work I'm always looking for new challenges and exciting projects.
+</p>
 
 <h2>IT Blogs - Worth Reading</h2>
 <ul>

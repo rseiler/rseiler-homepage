@@ -1,0 +1,67 @@
+<h1>POM-Project</h1>
+<p>The POM-Project is just a wrapper project to build the POM module and it's dependencies.</p>
+
+<h2>POM</h2>
+<p>The POM is indented to be used as a parent POM, to speed up the setup/configuration of a new project.</p>
+
+<h2>Features</h2>
+<ul>
+    <li>Static Code Analysis
+
+        <ul>
+            <li><a href="http://findbugs.sourceforge.net/" target="_blank">FindBugs</a></li>
+            <li><a href="http://pmd.sourceforge.net/" target="_blank">PMD</a></li>
+            <li><a href="http://checkstyle.sourceforge.net/" target="_blank">CheckStyle</a></li>
+            <li>reasonable configuration included</li>
+            <li>fails the build if an major issue is found</li>
+        </ul>
+    </li>
+    <li>
+        <a href="http://www.eclemma.org/jacoco/" target="_blank">JaCoCo</a> for coverage reports
+    </li>
+    <li>
+        <a href="https://maven.apache.org/surefire/" target="_blank">Surefire</a> for unit tests with two configurations
+
+        <ul>
+            <li>tests which are thread safe and will be executed in parallel on the same JVM</li>
+            <li>tests which aren't thread safe and therefor will be run in JVM forks</li>
+        </ul>
+    </li>
+    <li>
+        <a href="https://maven.apache.org/surefire/maven-failsafe-plugin/" target="_blank">Failsafe</a> for integration
+        tests
+    </li>
+    <li>
+        <a href="https://maven.apache.org/plugins/maven-site-plugin/" target="_blank">Maven Site</a>
+
+        <ul class="task-list">
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a> for the documentation
+            </li>
+            <li>Project info reports</li>
+            <li>Generated Javadoc</li>
+            <li>Source Code as HTML for code references</li>
+            <li>Genereated tag lists for todo/fixme and @deprecated</li>
+            <li>JaCoCo, Surfire and Failsafe reports</li>
+        </ul>
+    </li>
+    <li>Maven Profiles</li>
+</ul>
+
+
+<h2>Documentation</h2>
+<p>
+    Visit the documentation at: <a href="https://rseiler.github.io/pom-project/pom/index.html">Latest Documentation</a>
+</p>
+
+<h2>Source Code</h2>
+<p>The source is hosted on <a href="https://github.com/rseiler/pom-project" target="_blank">GitHub</a></p>
+
+<h2>License</h2>
+<p>
+    The pom-project is licensed under the terms of the
+    <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache License, Version 2.0</a>
+</p>
+
+<h2>Thank you!</h2>
+<p>I really appreciate all kind of feedback and contributions. Thanks for using and supporting the POM-project.</p>

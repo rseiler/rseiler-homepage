@@ -1,50 +1,22 @@
 <h1>Projects</h1>
 
-<h2>Contract Work</h2>
+<h2>Private Projects which are on the Maven Central Repository</h2>
 
-My contract work projects, which are publicly accessible. My other work is listed in my
-<a href="/cv">CV</a> under work experience.
+My projects which are aviable on the
+<a href="http://search.maven.org/#search|ga|1|at.rseiler" target="_blank">Central Repository</a>.
 
 <div class="project-entry">
-    <a href="http://mobile.willhaben.at/" target="_blank">
-        <h3>willhaben.at - Mobile Website</h3>
+    <a href="/pom-project">
+        <h3 id="maven-pom">Maven POM-Project</h3>
     </a>
-
-    <p>
-        I am the architect of this website and work in a team as developer on this website.
-    </p>
-</div>
-
-<div class="project-entry">
-    <a href="http://www.willhaben.at/iad" target="_blank">
-        <h3>willhaben.at - Desktop Website</h3>
-    </a>
-
-    <p>
-        I work in a team as developer on this website.
-    </p>
-</div>
-
-<div class="project-entry">
-    <a href="http://www.dasertragreich.at/" target="_blank">
-        <h3>dasErtragReich.at</h3>
-    </a>
-
-    <p>
-        I created this website alone (except of the design).
-    </p>
-</div>
-
-<h2>Private Projects</h2>
-
-<div class="project-entry">
-    <h3 id="maven-pom">Maven POM</h3>
 
     <div>
         <p>
-            The POM is indented to be used as a parent POM, to speed up the setup/configuration of a project.
-            I am using this POM as a parent POM for all my projects.
+            The POM of the POM-Project is indented to be used as a parent POM, to speed up the setup/configuration of a
+            project. I am using this POM as a parent POM for all my projects.
         </p>
+
+        <strong>Features</strong>
         <ul>
             <li>Static code analysis with
                 <a href="http://findbugs.sourceforge.net/" target="_blank">FindBugs</a>,
@@ -92,31 +64,9 @@ My contract work projects, which are publicly accessible. My other work is liste
 </div>
 
 <div class="project-entry">
-    <h3>LCMiP - Log Called Methods in Production</h3>
-
-    <div>
-        <p>
-            A tool box to log all called methods and to create a report of all unused classes and unused methods.
-        </p>
-
-        <p>
-            To instrument the code a
-            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/instrument/package-summary.html" target="_blank">
-                Java Agent
-            </a>
-            is used.
-        </p>
-
-        <p>
-            Resources:
-            <a href="https://github.com/rseiler/lcmip">Source Code (GitHub)</a>,
-            <a href="https://rseiler.github.io/lcmip/index.html">Documentation</a>
-        </p>
-    </div>
-</div>
-
-<div class="project-entry">
-    <h3>spBee - Stored Procedure Bee</h3>
+    <a href="/spBee">
+        <h3>spBee - Stored Procedure Bee</h3>
+    </a>
 
     <div>
         <p>
@@ -149,15 +99,48 @@ My contract work projects, which are publicly accessible. My other work is liste
     </div>
 </div>
 
+
+<h2>Private Projects</h2>
+
+My projects which aren't on the Central Repository, because it dosn't make sence to include them as Maven dependency.
+
+<div class="project-entry">
+    <h3>LCMiP - Log Called Methods in Production</h3>
+
+    <div>
+        <p>
+            A tool box to log all called methods and to create a report of all unused classes and unused methods.
+        </p>
+
+        <p>
+            To instrument the code a
+            <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/instrument/package-summary.html" target="_blank">
+                Java Agent
+            </a>
+            is used.
+        </p>
+
+        <p>
+            Resources:
+            <a href="https://github.com/rseiler/lcmip">Source Code (GitHub)</a>,
+            <a href="https://rseiler.github.io/lcmip/index.html">Documentation</a>
+        </p>
+    </div>
+</div>
+
 <div class="project-entry">
     <h3>Spring MVC Bootstrap Project</h3>
 
     <div>
-        TODO: put it on github
-        <br/>
-        This structure is intended for <strong>small to medium size websites</strong><br/>
+        <p>
+            The main focus of this project is to create a template for a webapp. So that you can just start developing
+            your webapp and you don't need to configure everything first. It's quite time consuming to create a nicely
+            configured webapp project.<br/>
+            This structure is intended for <strong>small to medium size websites</strong>.
+            Like <a href="/">this site</a> which is based on this template.
+        </p>
 
-        <h3>Features</h3>
+        <strong>Features</strong>
         <ul>
             <li>
                 <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">
@@ -176,18 +159,11 @@ My contract work projects, which are publicly accessible. My other work is liste
             <li>Static Code Analysis (see <a href="#maven-pom">Maven POM</a>)</li>
             <li>Full Maven integration (see <a href="#maven-pom">Maven POM</a>)</li>
         </ul>
+
+        <p>
+            <i>TODO: finish demo project and put it on GitHub.</i>
+        </p>
     </div>
-</div>
-
-<div class="project-entry">
-    <h3>Spring MVC Bootstrap Project - Advanced</h3>
-
-    <p>TODO</p>
-
-    <h3>Features</h3>
-    <ul>
-        <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
-    </ul>
 </div>
 
 <div class="project-entry">
@@ -208,5 +184,39 @@ My contract work projects, which are publicly accessible. My other work is liste
 
     <p>
         Link to the <a href="http://${hostUri}:8888/" data-port-link="">jLearn website</a> (german).
+    </p>
+</div>
+
+
+<h2>Contract Work</h2>
+
+My contract work projects, which are publicly accessible. My other work is listed in my
+<a href="/cv">CV</a> under work experience.
+
+<div class="project-entry">
+    <a href="http://mobile.willhaben.at/" target="_blank">
+        <h3>willhaben.at - Mobile Website</h3>
+    </a>
+
+    <p>
+        I am the architect of this website and work in a team as developer on this website.
+    </p>
+</div>
+<div class="project-entry">
+    <a href="http://www.willhaben.at/iad" target="_blank">
+        <h3>willhaben.at - Desktop Website</h3>
+    </a>
+
+    <p>
+        I work in a team as developer on this website.
+    </p>
+</div>
+<div class="project-entry">
+    <a href="http://www.dasertragreich.at/" target="_blank">
+        <h3>dasErtragReich.at</h3>
+    </a>
+
+    <p>
+        I created this website alone (except of the design).
     </p>
 </div>
