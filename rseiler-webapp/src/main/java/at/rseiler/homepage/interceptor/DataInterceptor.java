@@ -9,6 +9,8 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Injects global data into the modelMap.
@@ -30,7 +32,9 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
         if (modelAndView != null) {
             addViewName(modelAndView);
             addHostUri(request, modelAndView);
+            addCanonicalUrl(request, modelAndView);
             addReleaseInfo(modelAndView);
+            addTitleTag(modelAndView);
         }
     }
 
@@ -54,6 +58,14 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
         modelAndView.addObject("hostUri", request.getRemoteHost());
     }
 
+    private void addCanonicalUrl(HttpServletRequest request, ModelAndView modelAndView) {
+        Pattern p = Pattern.compile("http://([\\w\\.\\d:]+)");
+        Matcher m = p.matcher(request.getRequestURL().toString());
+        if (m.find()) {
+            modelAndView.addObject("canonicalUrl", request.getRequestURL().toString().replace(m.group(1), "rseiler.at"));
+        }
+    }
+
     /**
      * Injects the data from the release.info
      *
@@ -62,6 +74,12 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
     private void addReleaseInfo(ModelAndView modelAndView) {
         modelAndView.addObject("buildTime", releaseInfoService.getBuildTime());
         modelAndView.addObject("buildVersion", releaseInfoService.getBuildVersion());
+    }
+
+    private void addTitleTag(ModelAndView modelAndView) {
+        if (!modelAndView.getModelMap().containsAttribute("titleTag")) {
+            modelAndView.addObject("titleTag", "div");
+        }
     }
 
 }

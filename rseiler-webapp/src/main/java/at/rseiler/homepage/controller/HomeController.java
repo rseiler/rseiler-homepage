@@ -2,6 +2,7 @@ package at.rseiler.homepage.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -18,7 +19,8 @@ public class HomeController {
      * @return the view name
      */
     @RequestMapping("/")
-    public String root() {
+    public String root(ModelMap modelMap) {
+        modelMap.addAttribute("titleTag", "h1");
         return "home";
     }
 

@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type='image/x-icon' href="/resources/favicon.ico"/>
     <meta name="description" content="Reinhard Seiler - Software Developer"/>
     <meta name="keywords" content="reinhard seiler, software developer, software architect"/>
+    <link rel="canonical" href="$canonicalUrl"/>
 
     #parse('include/css-js-rseiler-includes.vm')
     <!-- build.time:${buildTime} -->
@@ -28,13 +29,13 @@
 
 <div id="wrapper">
     <div id="header" class="clearfix">
-        <div class="row">
-            <div class="site-title col-sm-7">
+        <div class="row" itemscope itemtype="http://schema.org/Person">
+            <$titleTag class="site-title col-sm-7" itemprop="name">
                 Reinhard Seiler
-            </div>
+            </$titleTag>
 
             <div class="site-description col-sm-5">
-                Software Developer: Java, Web and IT
+                <span itemprop="jobTitle">Software Developer</span>: Java, Web and IT
             </div>
         </div>
 
