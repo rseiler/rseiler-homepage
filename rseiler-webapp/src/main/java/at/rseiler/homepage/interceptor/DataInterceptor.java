@@ -58,6 +58,12 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
         modelAndView.addObject("hostUri", request.getRemoteHost());
     }
 
+    /**
+     * Adds the canonicalUrl variable.
+     *
+     * @param request      the current request object
+     * @param modelAndView the model into the date will be added
+     */
     private void addCanonicalUrl(HttpServletRequest request, ModelAndView modelAndView) {
         Pattern p = Pattern.compile("http://([\\w\\.\\d:]+)");
         Matcher m = p.matcher(request.getRequestURL().toString());
@@ -76,6 +82,11 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
         modelAndView.addObject("buildVersion", releaseInfoService.getBuildVersion());
     }
 
+    /**
+     * Adds titleTag variable as div if it doesn't exists.
+     *
+     * @param modelAndView the model into the date will be added
+     */
     private void addTitleTag(ModelAndView modelAndView) {
         if (!modelAndView.getModelMap().containsAttribute("titleTag")) {
             modelAndView.addObject("titleTag", "div");
