@@ -29,12 +29,12 @@
 
 <div id="wrapper">
     <div id="header" class="clearfix">
-        <div class="row" itemscope itemtype="http://schema.org/Person">
-            <$titleTag class="site-title col-sm-7" itemprop="name">
+        <div class="clearfix" itemscope itemtype="http://schema.org/Person">
+            <$titleTag class="site-title" itemprop="name">
                 Reinhard Seiler
             </$titleTag>
 
-            <div class="site-description col-sm-5">
+            <div class="site-description">
                 <span itemprop="jobTitle">Software Developer</span>: Java, Web and IT
             </div>
         </div>

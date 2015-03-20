@@ -23,8 +23,8 @@
 
 <h2>Technical skills, knowledge and competencies</h2>
 
-<div class="row clearfix">
-    <div class="col-md-4">
+<div class="skill-entry-block">
+    <div class="skill-entry-col">
         <div class="skill-entry">
             <div class="title">Programming Languages</div>
             <ul>
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="skill-entry-col">
         <div class="skill-entry">
             <div class="content">
                 <div class="title">Advanced Java</div>
@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="skill-entry-col">
         <div class="skill-entry">
             <div class="title">Tools</div>
             <ul>
