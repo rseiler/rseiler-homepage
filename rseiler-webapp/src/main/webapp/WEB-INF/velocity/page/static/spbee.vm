@@ -8,7 +8,7 @@
 <p>
     An important point is that there is no magic behind this framework like JPA/Hibernate with crazy reflection,
     proxies and framework logic. The only logic is how to translate the annotations to the corresponding Java code.
-    Thereby spBee has only about 1700 LoC (measured with [sloc](https://www.npmjs.com/package/sloc)).
+    Thereby spBee has only about 1700 LoC (measured with <a href="https://www.npmjs.com/package/sloc">sloc</a>).
 </p>
 <p>
     Everything is done at compile time. Therefore there is no performance shortcoming. No reflection. No proxies.

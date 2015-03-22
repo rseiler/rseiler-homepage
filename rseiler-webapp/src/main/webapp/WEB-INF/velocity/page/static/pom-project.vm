@@ -13,7 +13,7 @@
             <li><a href="http://pmd.sourceforge.net/" target="_blank">PMD</a></li>
             <li><a href="http://checkstyle.sourceforge.net/" target="_blank">CheckStyle</a></li>
             <li>reasonable configuration included</li>
-            <li>fails the build if an major issue is found</li>
+            <li>fails the build if a major issue is found</li>
         </ul>
     </li>
     <li>
@@ -48,6 +48,8 @@
     <li>Maven Profiles</li>
 </ul>
 
+<h2>Demo</h2>
+<p>Look at the <a href="https://rseiler.github.io/spBee/index.html">spBee Documentation</a>.</p>
 
 <h2>Documentation</h2>
 <p>

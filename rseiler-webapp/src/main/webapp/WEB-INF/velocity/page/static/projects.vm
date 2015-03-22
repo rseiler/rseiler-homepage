@@ -1,8 +1,8 @@
 <h1>Projects</h1>
 
-<h2>Private Projects which are on the Maven Central Repository</h2>
+<h2 id="maven-central-repository">Maven Central Repository</h2>
 
-My projects which are aviable on the
+My private projects which are aviable on the
 <a href="http://search.maven.org/#search|ga|1|at.rseiler" target="_blank">Central Repository</a>.
 
 <div class="project-entry">
@@ -100,7 +100,7 @@ My projects which are aviable on the
 </div>
 
 
-<h2>Private Projects</h2>
+<h2 id="private-projects">Private Projects</h2>
 
 My projects which aren't on the Central Repository, because it dosn't make sence to include them as Maven dependency.
 
@@ -188,7 +188,7 @@ My projects which aren't on the Central Repository, because it dosn't make sence
 </div>
 
 
-<h2>Contract Work</h2>
+<h2 id="contract-work">Contract Work</h2>
 
 My contract work projects, which are publicly accessible. My other work is listed in my
 <a href="/cv">CV</a> under work experience.
