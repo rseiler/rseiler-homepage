@@ -2,7 +2,7 @@
 
 <h2 id="maven-central-repository">Maven Central Repository</h2>
 
-My private projects which are aviable on the
+My private projects which are available on the
 <a href="http://search.maven.org/#search|ga|1|at.rseiler" target="_blank">Central Repository</a>.
 
 <div class="project-entry">
@@ -102,7 +102,7 @@ My private projects which are aviable on the
 
 <h2 id="private-projects">Private Projects</h2>
 
-My projects which aren't on the Central Repository, because it dosn't make sence to include them as Maven dependency.
+My projects which aren't on the Central Repository, because it doesn't make sense to include them as Maven dependency.
 
 <div class="project-entry">
     <h3>LCMiP - Log Called Methods in Production</h3>
@@ -171,19 +171,19 @@ My projects which aren't on the Central Repository, because it dosn't make sence
 
     <p>
         A website to help people learn Java.
-        On the website are a series of interactive exercises. The exercises can be solved and executed directly in the
+        On the website are interactive exercises. The exercises can be solved and executed directly in the
         browser. Nevertheless the output should be exactly the same if the program would be compiled and run with
         <i>javac</i> and <i>java</i>.
     </p>
 
     <p>
-        For me the most interesting aspect of the project was to do the compelition on the fly and the execution of the
+        For me the most interesting aspect of the project was to do the compilation on the fly and the execution of the
         Java code inside of the server JVM - no IO operations, no external processes. Of course the execution of the
         user code must be sandboxed.
     </p>
 
     <p>
-        Link to the <a href="http://${hostUri}:8888/" data-port-link="">jLearn website</a> (german).
+        Link to the <a href="http://${hostUri}:8888/" data-port-link="">jLearn website</a> (German).
     </p>
 </div>
 
