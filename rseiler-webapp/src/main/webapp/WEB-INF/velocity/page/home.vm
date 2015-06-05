@@ -69,7 +69,7 @@
         <a href="http://nginx.org/" target="_blank">ngnix</a>)
     </li>
     <li>
-        <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">SpringVMC</a>
+        <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">SpringMVC</a>
         with
         <a href="https://velocity.apache.org/">Velocity</a>
         is used as the main framework
