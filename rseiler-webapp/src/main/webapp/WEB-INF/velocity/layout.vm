@@ -25,9 +25,9 @@
         ga('send', 'pageview');
     </script>
 </head>
-<body id="page-${pageName}">
+<body id="page-${pageName}" class="rs">
 
-<div id="wrapper">
+<div class="wrapper">
     <div id="header" class="clearfix">
         <div class="clearfix" itemscope itemtype="http://schema.org/Person">
             <$titleTag class="site-title" itemprop="name">
@@ -38,23 +38,23 @@
                 <span itemprop="jobTitle">Software Developer</span>: Java, Web and IT
             </div>
         </div>
-
-        <nav role="navigation" class="navbar navbar-default">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="http://blog.rseiler.at">Blog</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/cv">Curriculum Vitae</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/imprint">Imprint</a></li>
-            </ul>
-        </nav>
     </div>
+</div>
 
+<nav role="navigation" class="navbar navbar-default">
+    <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="http://blog.rseiler.at">Blog</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/cv">Curriculum Vitae</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/imprint">Imprint</a></li>
+    </ul>
+</nav>
+
+<div class="wrapper">
     <div id="content">
-
         $screen_content
-
     </div>
 </div>
 
