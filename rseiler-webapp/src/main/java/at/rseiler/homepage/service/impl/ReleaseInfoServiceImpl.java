@@ -18,7 +18,7 @@ import java.util.Properties;
 @Service
 public class ReleaseInfoServiceImpl implements ReleaseInfoService {
 
-    private Logger logger = Logger.getLogger(ReleaseInfoServiceImpl.class);
+    private final Logger logger = Logger.getLogger(ReleaseInfoServiceImpl.class);
 
     /**
      * The release.info file.
