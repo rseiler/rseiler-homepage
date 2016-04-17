@@ -9,6 +9,7 @@ import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.view.AbstractTemplateViewResolver;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Locale;
 
 /**
  * Handles requests to static pages.
@@ -39,7 +40,7 @@ public class StaticViewController {
      */
     @RequestMapping("/{page:[\\w-]+}")
     public String generic(HttpServletRequest request, @PathVariable("page") String page) {
-        return getViewName(request, page.toLowerCase());
+        return getViewName(request, page.toLowerCase(Locale.ENGLISH));
     }
 
     /**

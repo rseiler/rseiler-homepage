@@ -1,6 +1,6 @@
 <p>
     My name is Reinhard Seiler and I am a passionate software developer. This site contains my writing on software
-    development, web technologies and IT in generally. As well as my projects, many of them are open source, which I
+    development, web technologies and IT in general. As well as my projects, many of them are open source, which I
     created in the last years.
 </p>
 
@@ -27,6 +27,11 @@
 <h2>Blog Post Highlights</h2>
 <ul>
     <li>
+        <a href="http://blog.rseiler.at/2015/06/microservices-with-spring-boot-netflix.html">
+            Microservices with Spring Boot, Netflix OSS and Maven - Overview
+        </a>
+    </li>
+    <li>
         <a href="http://blog.rseiler.at/2014/09/class-transformation-with-asm.html">
             Class Transformation with ASM
         </a>
@@ -34,6 +39,11 @@
     <li>
         <a href="http://blog.rseiler.at/2014/06/explanation-how-cglip-proxies-work.html">
             Explanation how CGLIB proxies work
+        </a>
+    </li>
+    <li>
+        <a href="http://blog.rseiler.at/2014/06/explanation-how-proxy-based-mock.html">
+            Explanation how proxy based Mock Frameworks work
         </a>
     </li>
     <li>
@@ -64,20 +74,22 @@
         <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/" target="_blank">Raspberry Pi 2</a>
     </li>
     <li>
-        The application server is a
-        <a href="https://tomcat.apache.org/index.html" target="_blank">Tomcat 8</a>
-        (no <a href="https://www.apache.org/" target="_blank">Apache</a> or
-        <a href="http://nginx.org/" target="_blank">ngnix</a>)
+        SSL enabled with a certificate from <a href="https://letsencrypt.org/">Let's Encrypt</a>
     </li>
     <li>
-        <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">SpringMVC</a>
+        The application server is a
+        <a href="https://tomcat.apache.org/index.html" target="_blank">Tomcat 8</a>
+        and before is an Apache2 with an an APJ proxy.
+    </li>
+    <li>
+        <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring MVC</a>
         with
         <a href="https://velocity.apache.org/">Velocity</a>
         is used as the main framework
     </li>
     <li>No database - the content is fairly static</li>
     <li>
-        Serves +800 requests/sec (mesasured with <a href="https://jmeter.apache.org/" target="_blank">JMeter</a>)
+        Serves +200 requests/sec (mesasured with <a href="https://jmeter.apache.org/" target="_blank">JMeter</a>)
     </li>
 
 </ul>
