@@ -15,14 +15,14 @@ public class RedirectToDomainInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        Matcher m = DOMAIN_PATTERN.matcher(request.getRequestURL().toString());
+        Matcher m = DOMAIN_PATTERN.matcher(request.getRequestURI());
 
         if (m.find()) {
             String domain = m.group(1);
 
             if (!domain.contains("rseiler.at") && !domain.contains("localhost")) {
                 response.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
-                response.setHeader("Location", getRedirectUri(request.getRequestURL().toString(), domain));
+                response.setHeader("Location", getRedirectUri(request.getRequestURI(), domain));
                 return false;
             }
         }
