@@ -6,4 +6,10 @@ services:
   - docker
 
 script:
-  - mvn install && cat docker/config.json | sed 's/${env.DOCKER_USERNAME}/'"DOCKER_USERNAME"'/g' | sed 's/${env.DOCKER_PASSWORD}/'"$DOCKER_PASSWORD"'/g' > ~/.dockercfg && mvn dockerfile:push --pl rseiler-webapp
+  - mvn install
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push rseiler/homepage;
+    fi
