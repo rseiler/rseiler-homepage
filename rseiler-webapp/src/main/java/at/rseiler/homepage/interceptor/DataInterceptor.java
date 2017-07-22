@@ -30,7 +30,7 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
     @Autowired
     public DataInterceptor(
             ReleaseInfoService releaseInfoService,
-            @Value("/resources/ui-rseiler/rseiler-1.0.0.css") Resource cssResource
+            @Value("classpath:rseiler.css") Resource cssResource
     ) throws IOException {
         this.releaseInfoService = releaseInfoService;
         this.cssCode = new String(FileCopyUtils.copyToByteArray(cssResource.getInputStream()), "UTF-8");

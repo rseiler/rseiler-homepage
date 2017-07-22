@@ -21,7 +21,7 @@ public class HomeController {
     @RequestMapping("/")
     public String root(ModelMap modelMap) {
         modelMap.addAttribute("titleTag", "h1");
-        return "home";
+        return "page/home";
     }
 
 }

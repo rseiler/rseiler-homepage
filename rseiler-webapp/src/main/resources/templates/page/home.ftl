@@ -1,0 +1,98 @@
+<#import "../layout.ftl" as layout>
+<@layout.default>
+<p>
+    My name is Reinhard Seiler and I am a passionate software developer. This site contains my writing on software
+    development, web technologies and IT in general. As well as my projects, many of them are open source, which I
+    created in the last years.
+</p>
+
+<h2>Projects on the Maven Central Repository</h2>
+<ul>
+    <li>
+        <a href="https://github.com/rseiler/pom-project">Maven POM-Project</a><br/>
+        The POM is indented to be used as a parent POM, to speed up the setup/configuration of a new project.
+    </li>
+    <li>
+        <a href="https://github.com/rseiler/spBee">spBee - Stored Procedure Bee</a><br/>
+        This framework allows to declare the stored procedures calls declarative instead of programmatically.
+    </li>
+</ul>
+
+<h2>GitHub (Open Source) Highlights</h2>
+<ul>
+    <li>
+        <a href="https://github.com/rseiler/lcmip">LCMiP - Log Called Methods in Production</a><br/>
+        A tool box to log all called methods and to create a report of all unused classes and unused methods.
+    </li>
+</ul>
+
+<h2>Blog Post Highlights</h2>
+<ul>
+    <li>
+        <a href="http://blog.rseiler.at/2015/06/microservices-with-spring-boot-netflix.html">
+            Microservices with Spring Boot, Netflix OSS and Maven - Overview
+        </a>
+    </li>
+    <li>
+        <a href="http://blog.rseiler.at/2014/09/class-transformation-with-asm.html">
+            Class Transformation with ASM
+        </a>
+    </li>
+    <li>
+        <a href="http://blog.rseiler.at/2014/06/explanation-how-cglip-proxies-work.html">
+            Explanation how CGLIB proxies work
+        </a>
+    </li>
+    <li>
+        <a href="http://blog.rseiler.at/2014/06/explanation-how-proxy-based-mock.html">
+            Explanation how proxy based Mock Frameworks work
+        </a>
+    </li>
+    <li>
+        <a href="http://blog.rseiler.at/2012/07/compile-truecrypt-on-raspberry-pi.html">
+            Compile Truecrypt on Raspberry Pi
+        </a>
+    </li>
+    <li>
+        <a href="http://blog.rseiler.at/2013/05/tutorial-how-to-install-tiny-tiny-rss.html">
+            Tutorial: How to install a Tiny Tiny RSS (tt-rss) server on a Raspberry Pi (nginx, php, mysql)
+        </a>
+    </li>
+</ul>
+
+<h2>IT Blogs Worth Reading</h2>
+<ul>
+    <li><a href="http://java.dzone.com/" target="_blank">http://java.dzone.com/</a></li>
+    <li><a href="https://plumbr.eu/blog" target="_blank">https://plumbr.eu/blog</a></li>
+    <li><a href="http://blog.takipi.com/" target="_blank">http://blog.takipi.com/</a></li>
+    <li><a href="http://zeroturnaround.com/blog/" target="_blank">http://zeroturnaround.com/blog/</a></li>
+    <li><a href="https://hacks.mozilla.org/" target="_blank">https://hacks.mozilla.org/</a></li>
+</ul>
+
+<h2>About the Server &amp; Technical Details</h2>
+<ul>
+    <li>
+        Hosted on a
+        <a href="http://www.raspberrypi.org/products/raspberry-pi-2-model-b/" target="_blank">Raspberry Pi 2</a>
+    </li>
+    <li>
+        SSL enabled with a certificate from <a href="https://letsencrypt.org/">Let's Encrypt</a>
+    </li>
+    <li>
+        The application server is a
+        <a href="https://tomcat.apache.org/index.html" target="_blank">Tomcat 8</a>
+        and before is an Apache2 with an an APJ proxy.
+    </li>
+    <li>
+        <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html" target="_blank">Spring MVC</a>
+        with
+        <a href="https://velocity.apache.org/">Velocity</a>
+        is used as the main framework
+    </li>
+    <li>No database - the content is fairly static</li>
+    <li>
+        Serves +200 requests/sec (mesasured with <a href="https://jmeter.apache.org/" target="_blank">JMeter</a>)
+    </li>
+
+</ul>
+</@layout.default>
