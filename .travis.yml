@@ -5,9 +5,5 @@ language: java
 services:
   - docker
 
-before_install:
-  - docker pull dordoka/rpi-java8
-  - cat docker/config.json | sed 's/${env.DOCKER_USERNAME}/'"DOCKER_USERNAME"'/g' | sed 's/${env.DOCKER_PASSWORD}/'"$DOCKER_PASSWORD"'/g' > ~/.dockercfg
-
 script:
-  - mvn install
+  - mvn install && cat docker/config.json | sed 's/${env.DOCKER_USERNAME}/'"DOCKER_USERNAME"'/g' | sed 's/${env.DOCKER_PASSWORD}/'"$DOCKER_PASSWORD"'/g' > ~/.dockercfg && dockerfile:push
