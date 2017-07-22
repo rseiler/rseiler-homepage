@@ -1,0 +1,8 @@
+{
+  "auths": {
+    "https://index.docker.io/v1/": {
+      "username": "${env.DOCKER_USERNAME}",
+      "password": "${env.DOCKER_PASSWORD}"
+    }
+  }
+}
