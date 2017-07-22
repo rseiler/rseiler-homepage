@@ -3,12 +3,16 @@ package at.rseiler.homepage.interceptor;
 import at.rseiler.homepage.service.ReleaseInfoService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -21,10 +25,15 @@ import java.util.regex.Pattern;
 public class DataInterceptor extends HandlerInterceptorAdapter {
 
     private final ReleaseInfoService releaseInfoService;
+    private final String cssCode;
 
     @Autowired
-    public DataInterceptor(ReleaseInfoService releaseInfoService) {
+    public DataInterceptor(
+            ReleaseInfoService releaseInfoService,
+            @Value("/resources/ui-rseiler/rseiler-1.0.0.css") Resource cssResource
+    ) throws IOException {
         this.releaseInfoService = releaseInfoService;
+        this.cssCode = new String(FileCopyUtils.copyToByteArray(cssResource.getInputStream()), "UTF-8");
     }
 
     @Override
@@ -35,6 +44,7 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
             addCanonicalUrl(request, modelAndView);
             addReleaseInfo(modelAndView);
             addTitleTag(modelAndView);
+            addCssCode(modelAndView);
         }
     }
 
@@ -91,6 +101,15 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
         if (!modelAndView.getModelMap().containsAttribute("titleTag")) {
             modelAndView.addObject("titleTag", "div");
         }
+    }
+
+    /**
+     * Adds the cssCode.
+     *
+     * @param modelAndView the model into the date will be added
+     */
+    private void addCssCode(ModelAndView modelAndView) {
+        modelAndView.addObject("cssCode", cssCode);
     }
 
 }
