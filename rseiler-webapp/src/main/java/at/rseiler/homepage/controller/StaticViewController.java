@@ -1,6 +1,8 @@
 package at.rseiler.homepage.controller;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +23,7 @@ import java.util.Locale;
 @Controller
 public class StaticViewController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(StaticViewController.class);
     private final ViewResolver viewResolver;
 
     @Autowired
@@ -31,7 +34,7 @@ public class StaticViewController {
     /**
      * Handles generic static pages.
      *
-     * @param page    the name of the static page
+     * @param page the name of the static page
      * @return the view name
      */
     @RequestMapping("/{page:[\\w-]+}")
@@ -42,7 +45,7 @@ public class StaticViewController {
     /**
      * Returns the view name based on the page if it exists. Otherwise the 404-not-found view name.
      *
-     * @param page    the name of the page
+     * @param page the name of the page
      * @return the view name.
      */
     private String getViewName(String page) {
@@ -53,13 +56,14 @@ public class StaticViewController {
     /**
      * Checks if the view exists.
      *
-     * @param view    the view which should be checked
+     * @param view the view which should be checked
      * @return true if the view exists
      */
     private boolean viewExists(String view) {
         try {
             return viewResolver.resolveViewName(view, Locale.ENGLISH) != null;
-        } catch (Exception ignore) {
+        } catch (Exception e) {
+            LOGGER.trace("View \"{}\" doesn't exist", view, e);
         }
         return false;
     }

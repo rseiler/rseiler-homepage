@@ -56,6 +56,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
         </dependency>
 
         <dependency>
@@ -106,7 +107,7 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
-                <version>1.3.4</version>
+                <version>1.4.0</version>
                 <configuration>
                     <finalName>rseiler-homepage</finalName>
                     <repository>rseiler/homepage</repository>

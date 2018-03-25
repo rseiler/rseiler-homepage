@@ -17,7 +17,7 @@ import java.util.Properties;
 @Service
 public class ReleaseInfoService {
 
-    private final Logger logger = Logger.getLogger(ReleaseInfoService.class);
+    private static final Logger LOGGER = Logger.getLogger(ReleaseInfoService.class);
 
     /**
      * The release.info file.
@@ -47,7 +47,7 @@ public class ReleaseInfoService {
             try {
                 releaseProperties.load(releaseInfoResource.getInputStream());
             } catch (IOException e) {
-                logger.error("Failed to load release.info", e);
+                LOGGER.error("Failed to load release.info", e);
             }
         }
 
