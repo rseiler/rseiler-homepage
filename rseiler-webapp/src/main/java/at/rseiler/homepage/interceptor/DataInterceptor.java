@@ -98,8 +98,8 @@ public class DataInterceptor extends HandlerInterceptorAdapter {
      * @param modelAndView the model into the date will be added
      */
     private void addTitleTag(ModelAndView modelAndView) {
-        if (!modelAndView.getModelMap().containsAttribute("titleTag")) {
-            modelAndView.addObject("titleTag", "div");
+        if (!modelAndView.getModelMap().containsAttribute("isHome")) {
+            modelAndView.addObject("isHome", false);
         }
     }
 

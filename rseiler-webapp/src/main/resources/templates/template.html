@@ -1,9 +1,8 @@
-<#macro default>
-<!doctype html>
-<html amp lang="en">
+<!DOCTYPE html>
+<html amp lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <title>Reinhard Seiler</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=0"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -13,9 +12,7 @@
     <meta name="keywords" content="reinhard seiler, software developer, software architect"/>
     <link rel="canonical" href="$canonicalUrl"/>
 
-    <style amp-custom>
-        ${cssCode}
-    </style>
+    <style amp-custom th:utext="${cssCode}"></style>
 
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -23,14 +20,17 @@
     <!-- build.time:${buildTime} -->
     <!-- build.version:${buildVersion} -->
 </head>
-<body id="${pageName}" class="rs">
+<body th:id="${pageName}" class="rs">
 
 <div class="wrapper">
     <div id="header" class="clearfix">
         <div class="clearfix" itemscope itemtype="http://schema.org/Person">
-            <${titleTag} class="site-title" itemprop="name">
+            <h1 th:if="${isHome}" class="site-title" itemprop="name">
                 Reinhard Seiler
-            </${titleTag}>
+            </h1>
+            <div th:unless="${isHome}" class="site-title" itemprop="name">
+                Reinhard Seiler
+            </div>
 
             <div class="site-description">
                 <span itemprop="jobTitle">Software Developer</span>: Java, Web and IT
@@ -51,9 +51,7 @@
 </nav>
 
 <div class="wrapper">
-    <div id="content">
-        <#nested/>
-    </div>
+    <div id="content" layout:fragment="content"></div>
 </div>
 
 <amp-analytics type="googleanalytics" id="analytics1">
@@ -74,4 +72,3 @@
 
 </body>
 </html>
-</#macro>

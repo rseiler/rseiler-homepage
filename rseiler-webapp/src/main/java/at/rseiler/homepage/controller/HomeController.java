@@ -20,7 +20,7 @@ public class HomeController {
      */
     @RequestMapping("/")
     public String root(ModelMap modelMap) {
-        modelMap.addAttribute("titleTag", "h1");
+        modelMap.addAttribute("isHome", true);
         return "page/home";
     }
 

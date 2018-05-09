@@ -8,9 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.view.AbstractTemplateViewResolver;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 /**
  * Handles requests to static pages.
@@ -25,9 +26,10 @@ public class StaticViewController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StaticViewController.class);
     private final ViewResolver viewResolver;
+    private final Map<String, Boolean> viewExists = new HashMap<>();
 
     @Autowired
-    public StaticViewController(AbstractTemplateViewResolver viewResolver) {
+    public StaticViewController(ViewResolver viewResolver) {
         this.viewResolver = viewResolver;
     }
 
@@ -60,12 +62,14 @@ public class StaticViewController {
      * @return true if the view exists
      */
     private boolean viewExists(String view) {
-        try {
-            return viewResolver.resolveViewName(view, Locale.ENGLISH) != null;
-        } catch (Exception e) {
-            LOGGER.trace("View \"{}\" doesn't exist", view, e);
+        if (!viewExists.containsKey(view)) {
+            try {
+                viewExists.put(view, viewResolver.resolveViewName(view, Locale.ENGLISH) != null);
+            } catch (Exception e) {
+                LOGGER.trace("View \"{}\" doesn't exist", view, e);
+            }
         }
-        return false;
-    }
 
+        return viewExists.get(view);
+    }
 }
